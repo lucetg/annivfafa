@@ -50,11 +50,10 @@
     <h1>HARDBOAT TRAILER</h1>
 
     <div id="video-wrapper">
-      <video id="video-container">
+      <video id="video-container" autoplay muted loop>
         <source src="vid-defis-pirate.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-      <img id="overlay-image" src="fond-noir.png" onclick="playVideo()">
+    </video>
+    <img id="overlay-image" src="fond-noir.png" onclick="playVideo()">
     </div>
   <h2>Vivez l'expérience innoubliable du HARDBOAT FESTIVAL au Parcexpo de Villefranche (69) le 18 octobre 2025</h2>
   <p>Billet à usage unique - non remboursable</p>    
@@ -64,7 +63,7 @@
     function playVideo() {
       const video = document.getElementById('video-container');
       video.muted = false;
-      video.play().catch(err => console.log("Lecture bloquée, l'utilisateur doit cliquer pour activer le son."));
+      video.play();
       document.getElementById('overlay-image').style.display = 'none';
     }
   </script>
