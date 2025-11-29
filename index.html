@@ -67,8 +67,9 @@
   <script>
     function playVideo() {
       const video = document.getElementById('video-container');
+      video.currentTime = 0;  // remet la vidéo au début
       video.muted = false;
-      video.play();
+      video.play().catch(err => console.log("Lecture bloquée")); 
       document.getElementById('overlay-image').style.display = 'none';
     }
   </script>
